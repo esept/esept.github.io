@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.1" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.1" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="不知道会不会有人点这里，但是我还是打算写点东西首先如果你在末尾看到了自己是第整十位数的访问者或者访问量，麻烦您就给我截个图发一下，这样没准我会给您点好处。其次，点到我这个博客的人应该认识的比较多，不认识的应该都是我放在一些社交网站上的个人介绍里的，因此自我介绍稍微来一点点。1997年八月的狮子座男生，现在依然是一名学生，因为一些不太正常的事情，我来到法国学习，两年法语，第一年没过复读的，然后是两年">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于我">
+<meta property="og:url" content="https://esept.github.io/about/index.html">
+<meta property="og:site_name" content="未定义的我">
+<meta property="og:description" content="不知道会不会有人点这里，但是我还是打算写点东西首先如果你在末尾看到了自己是第整十位数的访问者或者访问量，麻烦您就给我截个图发一下，这样没准我会给您点好处。其次，点到我这个博客的人应该认识的比较多，不认识的应该都是我放在一些社交网站上的个人介绍里的，因此自我介绍稍微来一点点。1997年八月的狮子座男生，现在依然是一名学生，因为一些不太正常的事情，我来到法国学习，两年法语，第一年没过复读的，然后是两年">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-05-08T07:52:59.000Z">
+<meta property="article:modified_time" content="2021-10-10T19:59:46.298Z">
+<meta property="article:author" content="HsUSH">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '6.0.1',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://esept.github.io/about/"/>
+
+
+
+
+
+  <title>Java_字符串 | 未定义的我</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">未定义的我</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">路漫漫其修远兮,吾将上下而求索</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />首页</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />关于</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />分类</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />归档</a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://esept.github.io/2020/07/02/java_%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="未定义的我">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java_字符串</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-02T00:00:00+02:00">2020-07-02</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>java.lang.String类代表字符串<br>程序当中所有双引号字符串,都是String类的对象(就算没有new,也是String)</p>
+<span id="more"></span>
+<p>字符串的特点:<br>字符串的内容用不可变<br>正是因为字符串不可改变,所以字符串是可以共享使用的<br>字符串效果上相当于是char[]字符数组,但是底层原理是byte[]字节数组.</p>
+<p>创建字符串的常见方式<br>三种构造方法:<br>public String()创建一个空白字符串,不含有任何内容<br>public String(char[] array):根据字符数组的内容,来创建对应的字符串<br>public String(byte[] array):根据字符数组的内容,来创建对应的字符串<br>一种直接创建<br>String str = “···”</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//使用空参构造</span></span><br><span class="line">        String str1 = <span class="keyword">new</span> String();</span><br><span class="line">        System.out.println(<span class="string">&quot;first&quot;</span> + str1);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        <span class="keyword">char</span>[] charArray = &#123;<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>,<span class="string">&#x27;C&#x27;</span>&#125;;</span><br><span class="line">        String str2 = <span class="keyword">new</span> String(charArray);</span><br><span class="line">        System.out.println(str2);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//根据字节数组创建字符串</span></span><br><span class="line">        <span class="keyword">byte</span>[] byteArray = &#123;<span class="number">97</span>,<span class="number">98</span>,<span class="number">99</span>&#125;;</span><br><span class="line">        String str3 = <span class="keyword">new</span> String(byteArray);</span><br><span class="line">        System.out.println(str3);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">out:</span><br><span class="line">first</span><br><span class="line">ABC</span><br><span class="line">abc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">         String str1 = <span class="string">&quot;abc&quot;</span>;</span><br><span class="line">         String str2 = <span class="string">&quot;abc&quot;</span>;</span><br><span class="line"></span><br><span class="line">         <span class="keyword">char</span>[] charArray = &#123;<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;b&#x27;</span>&#125;;</span><br><span class="line">         String str3 = <span class="keyword">new</span> String(charArray);</span><br><span class="line"></span><br><span class="line">         System.out.println(str1 == str2);</span><br><span class="line">         System.out.println(str1 == str3);</span><br><span class="line">         System.out.println(str2 == str3);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">out:</span><br><span class="line"><span class="keyword">true</span></span><br><span class="line"><span class="keyword">false</span></span><br><span class="line"><span class="keyword">false</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="内存分析"><a href="#内存分析" class="headerlink" title="内存分析"></a>内存分析</h1><p>栈                        堆<br>String str1[@0x666] -&gt;     (字符串常量池)                | 不在池中<br>                        {字符串对象-&gt; String}[@0x666] -&gt; [byte[]:97|98|99]<br>String str2[@0x666] -&gt;<br>栈                        堆<br>char[] charArray    -&gt;    char[]:’a’|’b’|’c’            -&gt;<br>String str3[@0x999    -&gt;    {字符串对象-&gt;String}[0x999]     -&gt; [byte[]:97|98|99<br>                            |<br>对于引用类型来说, == 进行的是地址值的比较<br>双引号直接写的字符串在常量池当中,new的不在池当中</p>
+<h1 id="字符串的常用方法"><a href="#字符串的常用方法" class="headerlink" title="字符串的常用方法"></a>字符串的常用方法</h1><p>‘==’ 是对对象的地址值比较,如果确实需要字符串的内容比较,可以使用两个方法</p>
+<p>public boolean equals(Object obj);参数可以是任何对象,只有参数是一个字符串并且内容相同的才会给true;否则返回false<br>任何对象对能用Object进行接受</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo3</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String str1 = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">        String str2 = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">char</span>[] charArray = &#123;<span class="string">&#x27;H&#x27;</span>,<span class="string">&#x27;e&#x27;</span>,<span class="string">&#x27;l&#x27;</span>,<span class="string">&#x27;l&#x27;</span>,<span class="string">&#x27;o&#x27;</span>&#125;;</span><br><span class="line">        String str3 = <span class="keyword">new</span> String(charArray);</span><br><span class="line"></span><br><span class="line">        System.out.println(str1.equals(str2));</span><br><span class="line">        System.out.println(str2.equals(str3));</span><br><span class="line">        System.out.println(str3.equals(<span class="string">&quot;Hello&quot;</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello&quot;</span>.equals(str1));</span><br><span class="line"></span><br><span class="line">        String str4 = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">        System.out.println(str1.equals(str4));</span><br><span class="line"></span><br><span class="line">        String str5 = <span class="keyword">null</span>;</span><br><span class="line">        System.out.println(<span class="string">&quot;abc&quot;</span>.equals(str5)); <span class="comment">// 推荐 返回false</span></span><br><span class="line">        <span class="comment">//System.out.println(str5.equals(&quot;abc&quot;)); // 不推荐，报错，空指针异常</span></span><br><span class="line"></span><br><span class="line">        String strA = <span class="string">&quot;Java&quot;</span>;</span><br><span class="line">        String strB = <span class="string">&quot;java&quot;</span>;</span><br><span class="line">        System.out.println(strA.equals(strB)); <span class="comment">//严格区分大小写</span></span><br><span class="line">        System.out.println(strA.equalsIgnoreCase(strB)); <span class="comment">// 方法忽略大小写</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">out:</span><br><span class="line"><span class="keyword">true</span></span><br><span class="line"><span class="keyword">true</span></span><br><span class="line"><span class="keyword">true</span></span><br><span class="line"><span class="keyword">true</span></span><br><span class="line"><span class="keyword">false</span></span><br><span class="line"><span class="keyword">false</span></span><br><span class="line"><span class="keyword">false</span></span><br><span class="line"><span class="keyword">true</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo4</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//获取字符串长度</span></span><br><span class="line">        <span class="keyword">int</span> l = <span class="string">&quot;sfdsgsfdhgdfhdfh&quot;</span>.length();</span><br><span class="line">        System.out.println(l);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//拼接字符串长度</span></span><br><span class="line">        String s1 = <span class="string">&quot;123&quot;</span>;</span><br><span class="line">        String s2 = <span class="string">&quot;1233&quot;</span>;</span><br><span class="line">        String s4 = s1.concat(s2);</span><br><span class="line">        System.out.println(s1);</span><br><span class="line">        System.out.println(s2);</span><br><span class="line">        System.out.println(s4);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取指定索引位置的单个字符</span></span><br><span class="line">        <span class="keyword">char</span> ch = <span class="string">&quot;abcdefghi&quot;</span>.charAt(<span class="number">2</span>);</span><br><span class="line">        System.out.println(ch);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//查找参数字符串在本来字符串中出现的第一次的索引位置，如果没有这返回-1</span></span><br><span class="line">        String ch1 = <span class="string">&quot;Helloworld&quot;</span>;</span><br><span class="line">        <span class="keyword">int</span> index = ch1.indexOf(<span class="string">&quot;llo&quot;</span>);</span><br><span class="line">        System.out.println(index);</span><br><span class="line">        <span class="keyword">int</span> index1 = ch1.indexOf(<span class="string">&quot;adcc&quot;</span>);</span><br><span class="line">        System.out.println(index1);</span><br><span class="line"></span><br><span class="line">                <span class="comment">//截取方法</span></span><br><span class="line"><span class="comment">//        public String substring(int index) 从参数位置一直到末尾，返回string</span></span><br><span class="line"><span class="comment">//        public String substring(int begin,int end)截取从begin开始，到end之前一个结束[begin,end)</span></span><br><span class="line">        String st1 = ch1.substring(<span class="number">3</span>);</span><br><span class="line">        System.out.println(st1);</span><br><span class="line">        String st2 = ch1.substring(<span class="number">4</span>,<span class="number">7</span>);</span><br><span class="line">        System.out.println(st2);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//对：字符串的内通不能改变进行解释</span></span><br><span class="line">        String sta = <span class="string">&quot;hello&quot;</span>;<span class="comment">// @ = 0x666</span></span><br><span class="line">        sta = <span class="string">&quot;Java&quot;</span>; <span class="comment">// @ = 0x999</span></span><br><span class="line">        <span class="comment">// sta 中保存的始终是地址值，在进行新的赋值时，只是将原来的0x666更换为新的0x999</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">out:</span><br><span class="line"><span class="number">16</span></span><br><span class="line"><span class="number">123</span></span><br><span class="line"><span class="number">1233</span></span><br><span class="line"><span class="number">1231233</span></span><br><span class="line">c</span><br><span class="line"><span class="number">2</span></span><br><span class="line">-<span class="number">1</span></span><br><span class="line">loworld</span><br><span class="line">owo</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo5</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//将当前字符串裁缝称为字符数组作为返回值</span></span><br><span class="line">        <span class="comment">//获得当前的字符串底层的字节数组</span></span><br><span class="line">        <span class="comment">// public String repalce(CharSequence,oldString,CharSequences,newString)</span></span><br><span class="line">        <span class="comment">// 将所有出现的老的字符串替换称为新的字符串</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">char</span>[] chars = <span class="string">&quot;Hello&quot;</span>.toCharArray();</span><br><span class="line">        System.out.println(chars[<span class="number">0</span>]);</span><br><span class="line">        System.out.println(chars.length);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">byte</span>[] bytes = <span class="string">&quot;abc&quot;</span>.getBytes();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; bytes.length; i++) &#123;</span><br><span class="line">            System.out.println(bytes[i]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        String a = <span class="string">&quot;how do you do&quot;</span>;</span><br><span class="line">        String b = a.replace(<span class="string">&quot;o&quot;</span>,<span class="string">&quot;-&quot;</span>);</span><br><span class="line">        System.out.println(a+<span class="string">&quot;\n&quot;</span>+b);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">out:</span><br><span class="line">H</span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">97</span></span><br><span class="line"><span class="number">98</span></span><br><span class="line"><span class="number">99</span></span><br><span class="line">how <span class="keyword">do</span> you <span class="keyword">do</span></span><br><span class="line">h-w d- y-u d-</span><br></pre></td></tr></table></figure>
+
+
+
+<p>分割字符串的方法，<br>public String[] split(String regex) 返回值也是String，用String数组接收</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo6</span>  </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String s1 = <span class="string">&quot;aaa,ccc,bb&quot;</span>;</span><br><span class="line">        String[] array = s1.split(<span class="string">&quot;,&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">            System.out.println(array[i]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        String s2 = <span class="string">&quot;aaa ccc bb&quot;</span>;</span><br><span class="line">        String[] array1 = s2.split(<span class="string">&quot; &quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array1.length; i++) &#123;</span><br><span class="line">            System.out.println(array1[i]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        String s3 = <span class="string">&quot;aaa.ccc.bb&quot;</span>;</span><br><span class="line">        String[] array2 = s3.split(<span class="string">&quot;\\.&quot;</span>); <span class="comment">// 在使用英文&#x27;.&#x27;时需要用&#x27;\\&#x27;来进行转义</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array2.length; i++) &#123;</span><br><span class="line">            System.out.println(array2[i]);</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">out:</span><br><span class="line">aaa</span><br><span class="line">ccc</span><br><span class="line">bb</span><br><span class="line">aaa</span><br><span class="line">ccc</span><br><span class="line">bb</span><br><span class="line">aaa</span><br><span class="line">ccc</span><br><span class="line">bb</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/07/02/java_%E7%BB%A7%E6%89%BF/" rel="next" title="Java_继承">
+                <i class="fa fa-chevron-left"></i> Java_继承
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/07/03/java_%E9%9D%99%E6%80%81/" rel="prev" title="Java_static">
+                Java_static <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">27</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">内存分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">字符串的常用方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HsUSH</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.1"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
