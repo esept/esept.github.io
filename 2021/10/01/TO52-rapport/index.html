@@ -151,7 +151,7 @@
 
 
 
-  <title>java_线程状态概述 | Indéfini-未定义的我</title>
+  <title>TO52-rapport-VersionChinois | Indéfini-未定义的我</title>
   
 
 
@@ -274,7 +274,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://esept.github.io/2020/05/13/%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E6%A6%82%E8%BF%B0/">
+    <link itemprop="mainEntityOfPage" href="https://esept.github.io/2021/10/01/TO52-rapport/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -291,7 +291,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">java_线程状态概述</h1>
+          <h1 class="post-title" itemprop="name headline">TO52-rapport-VersionChinois</h1>
         
 
         <div class="post-meta">
@@ -303,7 +303,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-13T10:54:02+02:00">2020-05-13</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-10-01T13:38:01+02:00">2021-10-01</time>
             
 
             
@@ -324,8 +324,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
                   </a>
                 </span>
 
@@ -361,39 +361,36 @@
       
 
       
-        <p>笔记</p>
-<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f1f38e9b-30b9-4837-90b4-10dde5e53fac/Untitled.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f1f38e9b-30b9-4837-90b4-10dde5e53fac/Untitled.png"></p>
-<h2 id="Waiting-无限等待"><a href="#Waiting-无限等待" class="headerlink" title="Waiting : 无限等待"></a>Waiting : 无限等待</h2><p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d7de6593-ffd2-4187-9f40-c53638d8e668/Untitled.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d7de6593-ffd2-4187-9f40-c53638d8e668/Untitled.png"></p>
-<p>等待唤醒案例:</p>
-<ul>
-<li><p>创建一个顾客线程: 告知老板要的包子的种类和数量,调用wait方法,放弃cpu的执行,进入到waiting状态</p>
-</li>
-<li><p>创建一个老板线程: 花五秒做包子,做好包子之后,调用notify方法,唤醒顾客吃包子</p>
-  <span id="more"></span></li>
-</ul>
-<p>注意:</p>
-<ul>
-<li>顾客和老板必须使用同步代码包裹起来,保证等待和唤醒只有一个在执行</li>
-<li>同步使用的锁对象必须保持统一</li>
-<li>只有锁对象才能调用wait和notify方法</li>
-</ul>
-<p>Object类中的方法</p>
-<ul>
-<li>void wait() :在其他线程调用此对象的notify/notifyAll()方法前,导致当前线程等待</li>
-<li>void notify(): 唤醒此对象监视器上等待的单个线程,会继续执行wait方法之后的代码</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">out:</span><br><span class="line">告知包子的种类和数量</span><br><span class="line">老板5s之后做好包子，告知顾客</span><br><span class="line">包子做好了，开吃</span><br></pre></td></tr></table></figure>
+        <h1 id="TO52-Rapport-VersionChinois"><a href="#TO52-Rapport-VersionChinois" class="headerlink" title="TO52-Rapport-VersionChinois"></a>TO52-Rapport-VersionChinois</h1><p>深度学习与机器学习</p>
+<p>基于欧洲航空局对图卢兹地区的像素的光谱分析与目标分类</p>
+<span id="more"></span>
 
-<h2 id="TimeWaiting-计时等待"><a href="#TimeWaiting-计时等待" class="headerlink" title="TimeWaiting(计时等待)"></a>TimeWaiting(计时等待)</h2><p>进入到TImeWaiting有两种方式:</p>
-<ul>
-<li>使用sleep(long m) 方法,在毫秒值结束之后,线程睡醒进入到Runnable/Bolcked状态</li>
-<li>使用wait(long m)方法,wait方法如果在毫秒值结束之后,还没有被notify唤醒,就会自动醒来,线程睡醒进入到Runnable/Blocked状态</li>
-</ul>
-<h2 id="唤醒的方法"><a href="#唤醒的方法" class="headerlink" title="唤醒的方法"></a>唤醒的方法</h2><ul>
-<li>void notify() : 唤醒在此对象监视器上等待的单个线程</li>
-<li>void notifyAll() : 唤醒在此对象监视器上等待的所有线程</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoWaitandNotify</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//创建锁对象，保证唯一</span></span><br><span class="line">        Object obj = <span class="keyword">new</span> Object();</span><br><span class="line">        <span class="comment">//创建顾客</span></span><br><span class="line">        <span class="keyword">new</span> Thread()&#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="comment">// 保证等待和唤醒的线程只能有一个，所以需要使用同步机制</span></span><br><span class="line">                <span class="keyword">synchronized</span> (obj)&#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;告知包子的种类和数量&quot;</span>);</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        obj.wait();</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="comment">//唤醒之后执行的代码</span></span><br><span class="line">                    System.out.println(<span class="string">&quot;包子做好了，开吃&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.start();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建老板</span></span><br><span class="line">        <span class="keyword">new</span> Thread()&#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="comment">//5s 做包子</span></span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    Thread.sleep(<span class="number">5000</span>);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">synchronized</span> (obj)&#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;老板5s之后做好包子，告知顾客&quot;</span>);</span><br><span class="line">                    obj.notify();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="服务器环境"><a href="#服务器环境" class="headerlink" title="服务器环境"></a>服务器环境</h3><p>Linux ubuntu -18.04</p>
+<p>GPU GP102GL(24Go)</p>
+<p>有docker,但是没有conda</p>
+<h3 id="数据简述"><a href="#数据简述" class="headerlink" title="数据简述"></a>数据简述</h3><p>根据csv文件显示,所有数据共37列</p>
+<p>有因为阴影、云造成的误差,还有一些不必要的数据冗余</p>
+<p>所有data解压缩完成,得到spectrum数据,class数据的不同值</p>
+<p>9个spcetrum</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">B5   <span class="number">6380552</span></span><br><span class="line">B11  <span class="number">6380552</span></span><br><span class="line">B12  <span class="number">6380552</span></span><br><span class="line">B4   <span class="number">6380552</span></span><br><span class="line">B6   <span class="number">6380552</span></span><br><span class="line">B7   <span class="number">6380552</span></span><br><span class="line">B8A  <span class="number">6380552</span></span><br><span class="line">B3   <span class="number">6380552</span></span><br><span class="line">B2   <span class="number">6380551</span></span><br><span class="line">Name: spectrum, dtype: int64</span><br></pre></td></tr></table></figure>
+
+<p>4个class</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">30</span>   <span class="number">41914316</span></span><br><span class="line"><span class="number">90</span>   <span class="number">9028724</span></span><br><span class="line"><span class="number">210</span>   <span class="number">3311000</span></span><br><span class="line"><span class="number">150</span>   <span class="number">3170927</span></span><br><span class="line">Name: <span class="class"><span class="keyword">class</span>, <span class="title">dtype</span>:</span> int64</span><br></pre></td></tr></table></figure>
+
+
+
+<p>问题:</p>
+<p>是否需要安装docker/conda环境,以免污染系统python环境</p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dataframe.sample(n)  <span class="comment"># 随机选取n行数据</span></span><br><span class="line">dataframe[<span class="string">&#x27;a&#x27;</span>].value_counts() <span class="comment"># 列名为a的数据统计</span></span><br><span class="line">pd.read_csv(<span class="string">&#x27;./path&#x27;</span>,usecols=[<span class="string">&#x27;a&#x27;</span>]) <span class="comment"># 读取path的‘a&#x27;列数据</span></span><br><span class="line">dataframe.into() <span class="comment"># 数据统计,数据类型,列名</span></span><br><span class="line">dataframe.count() <span class="comment"># 统计不为零的值</span></span><br><span class="line">nparray = dataframe.values <span class="comment"># dataframe 转 nparray</span></span><br><span class="line">df = pd.DataFrame(nparray) <span class="comment"># nparray 转 dataframe</span></span><br><span class="line">df[df&lt;<span class="number">0</span>] = numpy.nan <span class="comment"># 在df中小于0的数用NAN代替</span></span><br></pre></td></tr></table></figure>
+
+<p>根据之前的rapport_de_stage所知,这个项目所要求的分类并不是根据“图像”完成的,二十载像素光谱上的分类,因此基于图像的分类网络可能并不能完成这个任务,</p>
+<p>因此,这个项目可能并没有图像,只有光谱信息,想在主要任务则是找到一个可以应用在光谱上的分类网络,有没有可能在纯数据的情况下,机器学习网络可能更适合?</p>
+<p>由于现在只有数据(坐标,光谱,类,坐标,以及其他的一些日期?),并不能完全了解所有数据所代表的内容</p>
+<p>根据报告的内容,分类目标为植物和云?</p>
+<p>使用pandas,groupby可以讲所有数据分成九组,统计之后可知基本每个不同的“j”都有九个光谱,因此可以确定每个物体的id为’j’,之后再将相同j的光谱进行分析就能得到不同的图像/特征</p>
+<p>就是做的图有些奇怪</p>
+<p>然后 class_150 的所有266 的数据都是零,可以根据横向数据做填充</p>
+
       
     </div>
     
@@ -410,7 +407,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/java/" rel="tag"># java</a>
+            <a href="/tags/%E7%9B%AE%E6%A0%87%E5%88%86%E7%B1%BB/" rel="tag"># 目标分类</a>
+          
+            <a href="/tags/Jupyter-Notebook/" rel="tag"># Jupyter Notebook</a>
+          
+            <a href="/tags/numpy/" rel="tag"># numpy</a>
+          
+            <a href="/tags/Pandas/" rel="tag"># Pandas</a>
+          
+            <a href="/tags/matplotlib/" rel="tag"># matplotlib</a>
           
         </div>
       
@@ -423,8 +428,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/05/13/%E7%BA%BF%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/" rel="next" title="java_线程间通信">
-                <i class="fa fa-chevron-left"></i> java_线程间通信
+              <a href="/2020/07/03/File%E7%B1%BB/" rel="next" title="Java_File类">
+                <i class="fa fa-chevron-left"></i> Java_File类
               </a>
             
           </div>
@@ -432,10 +437,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/05/13/%E7%88%AC%E8%99%AB/" rel="prev" title="Scrapy爬虫">
-                Scrapy爬虫 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -568,7 +569,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Waiting-%E6%97%A0%E9%99%90%E7%AD%89%E5%BE%85"><span class="nav-number">1.</span> <span class="nav-text">Waiting : 无限等待</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TimeWaiting-%E8%AE%A1%E6%97%B6%E7%AD%89%E5%BE%85"><span class="nav-number">2.</span> <span class="nav-text">TimeWaiting(计时等待)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%94%A4%E9%86%92%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">唤醒的方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TO52-Rapport-VersionChinois"><span class="nav-number">1.</span> <span class="nav-text">TO52-Rapport-VersionChinois</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83"><span class="nav-number">1.0.1.</span> <span class="nav-text">服务器环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%AE%80%E8%BF%B0"><span class="nav-number">1.0.2.</span> <span class="nav-text">数据简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">1.0.3.</span> <span class="nav-text">使用方法</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
