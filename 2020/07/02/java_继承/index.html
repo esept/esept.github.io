@@ -64,7 +64,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java," />
 
 
 
@@ -75,16 +75,17 @@
 
 
 
-<meta name="description" content="不知道会不会有人点这里，但是我还是打算写点东西首先如果你在末尾看到了自己是第整十位数的访问者或者访问量，麻烦您就给我截个图发一下，这样没准我会给您点好处。其次，点到我这个博客的人应该认识的比较多，不认识的应该都是我放在一些社交网站上的个人介绍里的，因此自我介绍稍微来一点点。1997年八月的狮子座男生，现在依然是一名学生，因为一些不太正常的事情，我来到法国学习，两年法语，第一年没过复读的，然后是两年">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="https://esept.github.io/about/index.html">
+<meta name="description" content="面向对象思想: 做一件事情,找一个能解决这个事情的对象,调用对象的方法,完成事情 函数式编程思想: 只要能获取到结构,谁去做的,怎么做的都不重要,不重视过程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java_Lambda表达式">
+<meta property="og:url" content="https://esept.github.io/2020/07/03/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
 <meta property="og:site_name" content="未定义的我">
-<meta property="og:description" content="不知道会不会有人点这里，但是我还是打算写点东西首先如果你在末尾看到了自己是第整十位数的访问者或者访问量，麻烦您就给我截个图发一下，这样没准我会给您点好处。其次，点到我这个博客的人应该认识的比较多，不认识的应该都是我放在一些社交网站上的个人介绍里的，因此自我介绍稍微来一点点。1997年八月的狮子座男生，现在依然是一名学生，因为一些不太正常的事情，我来到法国学习，两年法语，第一年没过复读的，然后是两年">
+<meta property="og:description" content="面向对象思想: 做一件事情,找一个能解决这个事情的对象,调用对象的方法,完成事情 函数式编程思想: 只要能获取到结构,谁去做的,怎么做的都不重要,不重视过程">
 <meta property="og:locale">
-<meta property="article:published_time" content="2020-05-08T07:52:59.000Z">
-<meta property="article:modified_time" content="2021-10-10T19:59:46.298Z">
+<meta property="article:published_time" content="2020-07-02T22:00:00.000Z">
+<meta property="article:modified_time" content="2021-10-13T19:02:42.982Z">
 <meta property="article:author" content="HsUSH">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
 
 
@@ -113,7 +114,7 @@
 
 
 
-  <link rel="canonical" href="https://esept.github.io/about/"/>
+  <link rel="canonical" href="https://esept.github.io/2020/07/03/Lambda表达式/"/>
 
 
 
@@ -321,7 +322,10 @@
       
 
       
-        <p>Java继承性<br>继承是多态的前提,如果没有继承,就没有多态<br>继承主要解决的问题就是:<strong>共性抽取</strong><br>父类:也可以叫基类/超类<br>子类:也可以叫派生类<br>继承关系中,子类可以拥有父类的内容<br>子类还可以拥有自己专有的内容</p>
+        <p>Java继承性<br>继承是多态的前提,如果没有继承,就没有多态<br>继承主要解决的问题就是:<strong>共性抽取</strong></p>
+<span id="more"></span>
+
+<p>父类:也可以叫基类/超类<br>子类:也可以叫派生类<br>继承关系中,子类可以拥有父类的内容<br>子类还可以拥有自己专有的内容</p>
 <p>定义父类的格式:一个普通类的定义</p>
 <p>public class father{···}</p>
 <p> public class son extends father{···}</p>
@@ -342,7 +346,6 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fu</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num = <span class="number">10</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Father&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">···········································</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Zi</span> <span class="keyword">extends</span> <span class="title">Fu</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num = <span class="number">20</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.method();<span class="comment">//父类method</span></span><br><span class="line">        System.out.println(<span class="string">&quot;son&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">methdodZ</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(num);</span><br><span class="line">        System.out.println(<span class="keyword">super</span>.num); <span class="comment">//父类num</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Zi</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>this关键字:访问本类内容<br>在本类的成员方法中,访问本类的另一个成员方法<br>在本类的构造方法中,访问本类的另一个构造方法<br>在第三种用法中要注意,this(···)调用也必须是构造方法的第一个语句<br>super和this不能同时使用</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fu</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num =<span class="number">30</span> ;</span><br><span class="line">&#125;</span><br><span class="line">···········································</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Zi</span> <span class="keyword">extends</span> <span class="title">Fu</span></span>&#123;</span><br><span class="line"><span class="comment">//    /在本类的成员方法中,访问本类的成员变量</span></span><br><span class="line">    <span class="keyword">int</span> num = <span class="number">20</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Zi</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="comment">//        this(123);//本类的无参构造，调用本类的有参构造</span></span><br><span class="line">        <span class="keyword">this</span>(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="title">Zi</span><span class="params">(<span class="keyword">int</span> num)</span></span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Zi</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m)</span></span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showNum</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> num = <span class="number">10</span>;</span><br><span class="line">        System.out.println(num);<span class="comment">//局部变量</span></span><br><span class="line">        System.out.println(<span class="keyword">this</span>.num);<span class="comment">// 类成员变量</span></span><br><span class="line">        System.out.println(<span class="keyword">super</span>.num);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">metA</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">metB</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.metA();</span><br><span class="line">        System.out.println(<span class="string">&quot;nnn&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 
 
 
@@ -471,7 +474,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">27</span>
+                    <span class="site-state-item-count">25</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

@@ -64,7 +64,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java," />
 
 
 
@@ -75,16 +75,17 @@
 
 
 
-<meta name="description" content="不知道会不会有人点这里，但是我还是打算写点东西首先如果你在末尾看到了自己是第整十位数的访问者或者访问量，麻烦您就给我截个图发一下，这样没准我会给您点好处。其次，点到我这个博客的人应该认识的比较多，不认识的应该都是我放在一些社交网站上的个人介绍里的，因此自我介绍稍微来一点点。1997年八月的狮子座男生，现在依然是一名学生，因为一些不太正常的事情，我来到法国学习，两年法语，第一年没过复读的，然后是两年">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="https://esept.github.io/about/index.html">
+<meta name="description" content="面向对象思想: 做一件事情,找一个能解决这个事情的对象,调用对象的方法,完成事情 函数式编程思想: 只要能获取到结构,谁去做的,怎么做的都不重要,不重视过程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java_Lambda表达式">
+<meta property="og:url" content="https://esept.github.io/2020/07/03/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
 <meta property="og:site_name" content="未定义的我">
-<meta property="og:description" content="不知道会不会有人点这里，但是我还是打算写点东西首先如果你在末尾看到了自己是第整十位数的访问者或者访问量，麻烦您就给我截个图发一下，这样没准我会给您点好处。其次，点到我这个博客的人应该认识的比较多，不认识的应该都是我放在一些社交网站上的个人介绍里的，因此自我介绍稍微来一点点。1997年八月的狮子座男生，现在依然是一名学生，因为一些不太正常的事情，我来到法国学习，两年法语，第一年没过复读的，然后是两年">
+<meta property="og:description" content="面向对象思想: 做一件事情,找一个能解决这个事情的对象,调用对象的方法,完成事情 函数式编程思想: 只要能获取到结构,谁去做的,怎么做的都不重要,不重视过程">
 <meta property="og:locale">
-<meta property="article:published_time" content="2020-05-08T07:52:59.000Z">
-<meta property="article:modified_time" content="2021-10-10T19:59:46.298Z">
+<meta property="article:published_time" content="2020-07-02T22:00:00.000Z">
+<meta property="article:modified_time" content="2021-10-13T19:02:42.982Z">
 <meta property="article:author" content="HsUSH">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
 
 
@@ -113,7 +114,7 @@
 
 
 
-  <link rel="canonical" href="https://esept.github.io/about/"/>
+  <link rel="canonical" href="https://esept.github.io/2020/07/03/Lambda表达式/"/>
 
 
 
@@ -323,6 +324,8 @@
       
         <h1 id="Minist数据集"><a href="#Minist数据集" class="headerlink" title="Minist数据集"></a>Minist数据集</h1><p>sorcket</p>
 <h3 id="数据集介绍"><a href="#数据集介绍" class="headerlink" title="数据集介绍"></a>数据集介绍</h3><p>手写的七万个数字图片<br>机器学习领域的hello world<br>新的分类算法都会在minist上练习<br>ubyte 二进制文件</p>
+<span id="more"></span>
+
 <p>压缩的二进制文件<br>.mat 文件<br>二者各自的解压方式不同</p>
 <p>在minist里有两个训练的压缩包<br>images 和 labels分别是图片和标签</p>
 <h3 id="数据介绍"><a href="#数据介绍" class="headerlink" title="数据介绍"></a>数据介绍</h3><p>Minist在解压之后是二进制文件，需要再进行解包才能获得数据<br>需要知道解包格式<br>第一行：<br>offset 偏移：0000<br>type = 32bits -》 4个int<br>description：magic number 魔法数字<br>第二行：<br>0004 -〉第一行4个int<br>32bit -》4个int<br>number of items 标签个数<br>后面的：<br>0008-0009····数字都是从0到9，因此不需要过大的位置<br>Unsigned byte ：一个byte<br>label：标签<br>Django-》http协议（body-key-value）需要有request然后返回response<br>Socket协议，传输byte数组 可以常链接 延迟低</p>
@@ -629,7 +632,7 @@ array([False])<figure class="highlight python"><table><tr><td class="gutter"><pr
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">27</span>
+                    <span class="site-state-item-count">25</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

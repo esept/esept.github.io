@@ -64,7 +64,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java," />
 
 
 
@@ -75,16 +75,17 @@
 
 
 
-<meta name="description" content="不知道会不会有人点这里，但是我还是打算写点东西首先如果你在末尾看到了自己是第整十位数的访问者或者访问量，麻烦您就给我截个图发一下，这样没准我会给您点好处。其次，点到我这个博客的人应该认识的比较多，不认识的应该都是我放在一些社交网站上的个人介绍里的，因此自我介绍稍微来一点点。1997年八月的狮子座男生，现在依然是一名学生，因为一些不太正常的事情，我来到法国学习，两年法语，第一年没过复读的，然后是两年">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="https://esept.github.io/about/index.html">
+<meta name="description" content="面向对象思想: 做一件事情,找一个能解决这个事情的对象,调用对象的方法,完成事情 函数式编程思想: 只要能获取到结构,谁去做的,怎么做的都不重要,不重视过程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java_Lambda表达式">
+<meta property="og:url" content="https://esept.github.io/2020/07/03/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
 <meta property="og:site_name" content="未定义的我">
-<meta property="og:description" content="不知道会不会有人点这里，但是我还是打算写点东西首先如果你在末尾看到了自己是第整十位数的访问者或者访问量，麻烦您就给我截个图发一下，这样没准我会给您点好处。其次，点到我这个博客的人应该认识的比较多，不认识的应该都是我放在一些社交网站上的个人介绍里的，因此自我介绍稍微来一点点。1997年八月的狮子座男生，现在依然是一名学生，因为一些不太正常的事情，我来到法国学习，两年法语，第一年没过复读的，然后是两年">
+<meta property="og:description" content="面向对象思想: 做一件事情,找一个能解决这个事情的对象,调用对象的方法,完成事情 函数式编程思想: 只要能获取到结构,谁去做的,怎么做的都不重要,不重视过程">
 <meta property="og:locale">
-<meta property="article:published_time" content="2020-05-08T07:52:59.000Z">
-<meta property="article:modified_time" content="2021-10-10T19:59:46.298Z">
+<meta property="article:published_time" content="2020-07-02T22:00:00.000Z">
+<meta property="article:modified_time" content="2021-10-13T19:02:42.982Z">
 <meta property="article:author" content="HsUSH">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
 
 
@@ -113,7 +114,7 @@
 
 
 
-  <link rel="canonical" href="https://esept.github.io/about/"/>
+  <link rel="canonical" href="https://esept.github.io/2020/07/03/Lambda表达式/"/>
 
 
 
@@ -219,298 +220,6 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://esept.github.io/2020/05/17/numpy/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="未定义的我">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/17/numpy/" itemprop="url">numpy</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-17T10:01:30+02:00">2020-05-17</time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>numpy的安装及基础操作<br>针对数组和矩阵</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/05/17/numpy/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://esept.github.io/2020/05/15/jupyternotebook/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="未定义的我">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/15/jupyternotebook/" itemprop="url">Jupyter notebook 基础</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-15T22:07:11+02:00">2020-05-15</time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>数据科学原理与数据处理第一节<br>Jupyter Notebook的基础使用</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/05/15/jupyternotebook/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
     
       
 
@@ -1055,39 +764,21 @@
 
       
         
-          
-            <p>笔记</p>
+          <p>笔记</p>
 <p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f1f38e9b-30b9-4837-90b4-10dde5e53fac/Untitled.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f1f38e9b-30b9-4837-90b4-10dde5e53fac/Untitled.png"></p>
 <h2 id="Waiting-无限等待"><a href="#Waiting-无限等待" class="headerlink" title="Waiting : 无限等待"></a>Waiting : 无限等待</h2><p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d7de6593-ffd2-4187-9f40-c53638d8e668/Untitled.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d7de6593-ffd2-4187-9f40-c53638d8e668/Untitled.png"></p>
 <p>等待唤醒案例:</p>
 <ul>
-<li>创建一个顾客线程: 告知老板要的包子的种类和数量,调用wait方法,放弃cpu的执行,进入到waiting状态</li>
-<li>创建一个老板线程: 花五秒做包子,做好包子之后,调用notify方法,唤醒顾客吃包子</li>
-</ul>
-<p>注意:</p>
-<ul>
-<li>顾客和老板必须使用同步代码包裹起来,保证等待和唤醒只有一个在执行</li>
-<li>同步使用的锁对象必须保持统一</li>
-<li>只有锁对象才能调用wait和notify方法</li>
-</ul>
-<p>Object类中的方法</p>
-<ul>
-<li>void wait() :在其他线程调用此对象的notify/notifyAll()方法前,导致当前线程等待</li>
-<li>void notify(): 唤醒此对象监视器上等待的单个线程,会继续执行wait方法之后的代码</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">out:</span><br><span class="line">告知包子的种类和数量</span><br><span class="line">老板5s之后做好包子，告知顾客</span><br><span class="line">包子做好了，开吃</span><br></pre></td></tr></table></figure>
-
-<h2 id="TimeWaiting-计时等待"><a href="#TimeWaiting-计时等待" class="headerlink" title="TimeWaiting(计时等待)"></a>TimeWaiting(计时等待)</h2><p>进入到TImeWaiting有两种方式:</p>
-<ul>
-<li>使用sleep(long m) 方法,在毫秒值结束之后,线程睡醒进入到Runnable/Bolcked状态</li>
-<li>使用wait(long m)方法,wait方法如果在毫秒值结束之后,还没有被notify唤醒,就会自动醒来,线程睡醒进入到Runnable/Blocked状态</li>
-</ul>
-<h2 id="唤醒的方法"><a href="#唤醒的方法" class="headerlink" title="唤醒的方法"></a>唤醒的方法</h2><ul>
-<li>void notify() : 唤醒在此对象监视器上等待的单个线程</li>
-<li>void notifyAll() : 唤醒在此对象监视器上等待的所有线程</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoWaitandNotify</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//创建锁对象，保证唯一</span></span><br><span class="line">        Object obj = <span class="keyword">new</span> Object();</span><br><span class="line">        <span class="comment">//创建顾客</span></span><br><span class="line">        <span class="keyword">new</span> Thread()&#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="comment">// 保证等待和唤醒的线程只能有一个，所以需要使用同步机制</span></span><br><span class="line">                <span class="keyword">synchronized</span> (obj)&#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;告知包子的种类和数量&quot;</span>);</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        obj.wait();</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="comment">//唤醒之后执行的代码</span></span><br><span class="line">                    System.out.println(<span class="string">&quot;包子做好了，开吃&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.start();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建老板</span></span><br><span class="line">        <span class="keyword">new</span> Thread()&#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="comment">//5s 做包子</span></span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    Thread.sleep(<span class="number">5000</span>);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">synchronized</span> (obj)&#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;老板5s之后做好包子，告知顾客&quot;</span>);</span><br><span class="line">                    obj.notify();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
+<li><p>创建一个顾客线程: 告知老板要的包子的种类和数量,调用wait方法,放弃cpu的执行,进入到waiting状态</p>
+</li>
+<li><p>创建一个老板线程: 花五秒做包子,做好包子之后,调用notify方法,唤醒顾客吃包子</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/05/13/%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E6%A6%82%E8%BF%B0/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1226,16 +917,16 @@
 
       
         
-          
-            <p>概念</p>
+          <p>概念</p>
 <p>多个线程在使用统一资源,但是处理的动作(线程的任务)不同</p>
 <p>在处理统一资源的时候就存在线程通信问题</p>
-<p>多个线程并发执行的时候,在默认条件下CPU是随机切换线程的,当我们需要多个线程来处理统一任务,并且希望他们有规律的执行,那么多线程之间需要一些协调通信,以此来帮助我们达到多线程共同操作同一份数据</p>
-<p>多个线程在操作同一份数据时,为了避免对同一共享变量的争夺,我们需要通过&lt;等待唤醒机制&gt;来使各个线程能有效的使用资源</p>
-<h2 id="等待唤醒机制-线程之间的通信"><a href="#等待唤醒机制-线程之间的通信" class="headerlink" title="等待唤醒机制: 线程之间的通信"></a>等待唤醒机制: 线程之间的通信</h2><p>重点: 有效的利用资源(吃一个,做一个,吃一个,做一个)</p>
-<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/551e0db2-47c3-4a95-9b0f-05be87d3db5a/Untitled.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/551e0db2-47c3-4a95-9b0f-05be87d3db5a/Untitled.png"></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Baozi</span> </span>&#123;</span><br><span class="line">    String pi;</span><br><span class="line">    String xian;</span><br><span class="line">    <span class="comment">//包子的状态： true 有 false 没有</span></span><br><span class="line">    <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">package</span> 线程间通信;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">chihuo</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Baozi bz;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">chihuo</span><span class="params">(Baozi bz)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.bz = bz;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 线程任务： 吃包子</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 使用循环，让吃货一直吃包子</span></span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>)&#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (bz)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(bz.flag == <span class="keyword">false</span>)&#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        bz.wait();</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="comment">// 线程被唤醒之后的操作， 吃包子</span></span><br><span class="line">                System.out.println(<span class="string">&quot;吃货正在吃&quot;</span>+bz.pi+bz.xian+<span class="string">&quot;的包子&quot;</span>);</span><br><span class="line">                bz.flag = <span class="keyword">false</span>;</span><br><span class="line">                <span class="comment">// 唤醒包子铺，继续生产</span></span><br><span class="line">                bz.notify();</span><br><span class="line">                System.out.println(<span class="string">&quot;吃货吃完了&quot;</span>+bz.pi+bz.xian+<span class="string">&quot;的包子，包子铺开始生产了&quot;</span>);</span><br><span class="line"></span><br><span class="line">                System.out.println(<span class="string">&quot;==================================&quot;</span>);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">package</span> 线程间通信;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Baozipu</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123; <span class="comment">// 继承线程方法</span></span><br><span class="line">    <span class="comment">//需要在成员位置创建一个包子变量</span></span><br><span class="line">    <span class="keyword">private</span> Baozi bz;</span><br><span class="line"></span><br><span class="line"><span class="comment">//    使用带参构造方法为包子赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Baozipu</span><span class="params">(Baozi bz)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.bz = bz;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置线程任务（run） 生产包子</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (bz)&#123;</span><br><span class="line">                <span class="keyword">if</span>(bz.flag==<span class="keyword">true</span>)&#123; <span class="comment">// 对包子的状态进行判断</span></span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        bz.wait();<span class="comment">// 包子铺调用wait进入等待状态</span></span><br><span class="line">                    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 被唤醒之后执行，包子铺生产包子</span></span><br><span class="line">                <span class="comment">// 增加一些趣味性，交替生产两种包子</span></span><br><span class="line">                <span class="keyword">if</span>(count%<span class="number">2</span> == <span class="number">0</span>)&#123;</span><br><span class="line">                    bz.pi = <span class="string">&quot;薄皮&quot;</span>;</span><br><span class="line">                    bz.xian = <span class="string">&quot;三鲜&quot;</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                    bz.pi = <span class="string">&quot;冰皮&quot;</span>;</span><br><span class="line">                    bz.xian = <span class="string">&quot;牛肉大葱&quot;</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                count ++ ;</span><br><span class="line">                System.out.println(<span class="string">&quot;包子铺正在生产的是： &quot;</span>+bz.pi+bz.xian+<span class="string">&quot;包子&quot;</span>);</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    Thread.sleep(<span class="number">3000</span>);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">//包子铺生产好了包子，修改包子的状态</span></span><br><span class="line">                bz.flag = <span class="keyword">true</span>;</span><br><span class="line">                <span class="comment">//唤醒吃货线程，让吃货线程吃包子</span></span><br><span class="line">                bz.notify();</span><br><span class="line">                System.out.println(<span class="string">&quot;包子铺已经生产好： &quot;</span>+bz.pi+bz.xian+<span class="string">&quot;包子&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 创建包子对象</span></span><br><span class="line">        Baozi bz = <span class="keyword">new</span> Baozi();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">new</span> Baozipu(bz).start();</span><br><span class="line">        <span class="keyword">new</span> chihuo(bz).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">out:</span><br><span class="line">包子铺正在生产的是： 薄皮三鲜包子</span><br><span class="line">包子铺已经生产好： 薄皮三鲜包子</span><br><span class="line">吃货正在吃薄皮三鲜的包子</span><br><span class="line">吃货吃完了薄皮三鲜的包子，包子铺开始生产了</span><br><span class="line">==================================</span><br><span class="line">包子铺正在生产的是： 冰皮牛肉大葱包子</span><br><span class="line">包子铺已经生产好： 冰皮牛肉大葱包子</span><br><span class="line">吃货正在吃冰皮牛肉大葱的包子</span><br><span class="line">吃货吃完了冰皮牛肉大葱的包子，包子铺开始生产了</span><br><span class="line">==================================</span><br></pre></td></tr></table></figure>
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/05/13/%E7%BA%BF%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1318,7 +1009,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">27</span>
+                    <span class="site-state-item-count">25</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
