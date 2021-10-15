@@ -96,7 +96,7 @@
 
 
 
-  <meta name="keywords" content=",,,,," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -107,21 +107,16 @@
 
 
 
-<meta name="description" content="TO52-Rapport-VersionChinois深度学习与机器学习 基于欧洲航空局对图卢兹地区的像素的光谱分析与目标分类">
+<meta name="description" content="不知道会不会有人点这里，但是我还是打算写点东西 下面的链接是个人简历 然后,这里是我的简历 还有在线版,根据项目实时更新 暂时所有文章都是我的笔记,但是准备以后每周写个总结什么的 分类就是分类,归档就是归档, ​                                            ————————————————-10-10-2021————————————————- 很久之后的">
 <meta property="og:type" content="website">
-<meta property="og:title" content="TO52-rapport-VersionChinois">
-<meta property="og:url" content="https://esept.github.io/TO52/TO52-rapport.html">
+<meta property="og:title" content="关于我">
+<meta property="og:url" content="https://esept.github.io/about/index.html">
 <meta property="og:site_name" content="Indéfini-未定义的我">
-<meta property="og:description" content="TO52-Rapport-VersionChinois深度学习与机器学习 基于欧洲航空局对图卢兹地区的像素的光谱分析与目标分类">
+<meta property="og:description" content="不知道会不会有人点这里，但是我还是打算写点东西 下面的链接是个人简历 然后,这里是我的简历 还有在线版,根据项目实时更新 暂时所有文章都是我的笔记,但是准备以后每周写个总结什么的 分类就是分类,归档就是归档, ​                                            ————————————————-10-10-2021————————————————- 很久之后的">
 <meta property="og:locale">
-<meta property="article:published_time" content="2021-10-01T11:38:01.000Z">
-<meta property="article:modified_time" content="2021-10-13T20:38:06.694Z">
+<meta property="article:published_time" content="2020-05-08T07:52:59.000Z">
+<meta property="article:modified_time" content="2021-10-15T20:53:29.278Z">
 <meta property="article:author" content="HsUSH">
-<meta property="article:tag" content="目标分类">
-<meta property="article:tag" content="Jupyter Notebook">
-<meta property="article:tag" content="numpy">
-<meta property="article:tag" content="Pandas">
-<meta property="article:tag" content="matplotlib">
 <meta name="twitter:card" content="summary">
 
 
@@ -150,7 +145,7 @@
 
 
 
-  <link rel="canonical" href="https://esept.github.io/TO52/TO52-rapport.html"/>
+  <link rel="canonical" href="https://esept.github.io/about/"/>
 
 
 
@@ -773,13 +768,13 @@
 <h4 id="methode"><a href="#methode" class="headerlink" title="methode"></a>methode</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">draw_by_spectrum</span>(<span class="params">filename</span>):</span></span><br><span class="line">    data = pd.read_csv(filename)</span><br><span class="line">    data_s = data.groupby(by=<span class="string">&quot;spectrum&quot;</span>)</span><br><span class="line">    spectrum = [<span class="string">&#x27;B2&#x27;</span>,<span class="string">&#x27;B3&#x27;</span>,<span class="string">&#x27;B4&#x27;</span>,<span class="string">&#x27;B5&#x27;</span>,<span class="string">&#x27;B6&#x27;</span>,<span class="string">&#x27;B7&#x27;</span>,<span class="string">&#x27;B8A&#x27;</span>,<span class="string">&#x27;B11&#x27;</span>,<span class="string">&#x27;B12&#x27;</span>]</span><br><span class="line">    data_g = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(spectrum)):</span><br><span class="line">        data_g.append(data_s.get_group(spectrum[i]))</span><br><span class="line">    header = <span class="built_in">list</span>(data_30.columns.values)</span><br><span class="line">    x = header[<span class="number">7</span>:]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(spectrum)):</span><br><span class="line">        plt.subplot(<span class="number">3</span>,<span class="number">3</span>,i+<span class="number">1</span>)</span><br><span class="line">        y = data_g[i].T[<span class="number">7</span>:]</span><br><span class="line">        plt.plot(x,y,linewidth=<span class="number">0.3</span>)</span><br><span class="line"><span class="comment">#         plt.grid()</span></span><br><span class="line">        plt.title(spectrum[i])</span><br><span class="line">    plt.savefig(<span class="built_in">str</span>(filename)+<span class="string">&quot;.png&quot;</span>,dpi=<span class="number">300</span>)</span><br></pre></td></tr></table></figure>
 
 <p>la methode draw_by_spectrum peut classifier les spectrum et le designer sur une 3*3 tableau</p>
-<p><img src="class_30.csv.png" alt="class_30.csv"></p>
+<p><img src="/images/class_30csv.png" alt="class_30csv"></p>
 <p>class 30 avec draw_by_spectrum</p>
-<p><img src="class_90.csv.png" alt="class_90.csv"></p>
+<p><img src="/images/class_90csv.png" alt="class_90.csv"></p>
 <p>class 90 avec draw_by_spectrum</p>
-<p><img src="class_150.csv.png" alt="class_150.csv"></p>
+<p><img src="/images/class_150csv.png" alt="class_150.csv"></p>
 <p>class 150 avec draw_by_spectrum</p>
-<p><img src="class_210.csv.png" alt="class_210.csv"></p>
+<p><img src="/images/class_210csv.png" alt="class_210.csv"></p>
 <p>class 210 avec draw_by_spectrum</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">draw_by_pixel</span>(<span class="params">filename,col</span>):</span></span><br><span class="line">    data = pd.read_csv(filename)</span><br><span class="line">    data_g = data.groupby(by=<span class="string">&#x27;j&#x27;</span>)</span><br><span class="line">    header = <span class="built_in">list</span>(data.columns.values)</span><br><span class="line">    x = header[<span class="number">7</span>:]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>):</span><br><span class="line">        y = data_g.get_group(data[<span class="string">&#x27;j&#x27;</span>].<span class="built_in">min</span>()+i)</span><br><span class="line">        plt.plot(x,y.T[<span class="number">7</span>:],color=col)</span><br></pre></td></tr></table></figure>
 
