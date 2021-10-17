@@ -107,15 +107,15 @@
 
 
 
-<meta name="description" content="不知道会不会有人点这里，但是我还是打算写点东西 下面的链接是个人简历 然后,这里是我的简历 还有在线版,根据项目实时更新 暂时所有文章都是我的笔记,但是准备以后每周写个总结什么的 分类就是分类,归档就是归档, ​                                            ————————————————-10-10-2021————————————————- 很久之后的">
+<meta name="description" content="Hsu_zhy的个人博客">
 <meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="https://esept.github.io/about/index.html">
+<meta property="og:title" content="Categories">
+<meta property="og:url" content="https://esept.github.io/categories/index.html">
 <meta property="og:site_name" content="Indéfini-未定义的我">
-<meta property="og:description" content="不知道会不会有人点这里，但是我还是打算写点东西 下面的链接是个人简历 然后,这里是我的简历 还有在线版,根据项目实时更新 暂时所有文章都是我的笔记,但是准备以后每周写个总结什么的 分类就是分类,归档就是归档, ​                                            ————————————————-10-10-2021————————————————- 很久之后的">
+<meta property="og:description" content="Hsu_zhy的个人博客">
 <meta property="og:locale">
-<meta property="article:published_time" content="2020-05-08T07:52:59.000Z">
-<meta property="article:modified_time" content="2021-10-15T20:53:29.278Z">
+<meta property="article:published_time" content="2021-10-13T20:17:06.000Z">
+<meta property="article:modified_time" content="2021-10-15T20:18:22.087Z">
 <meta property="article:author" content="HsUSH">
 <meta name="twitter:card" content="summary">
 
@@ -145,7 +145,7 @@
 
 
 
-  <link rel="canonical" href="https://esept.github.io/about/"/>
+  <link rel="canonical" href="https://esept.github.io/categories/"/>
 
 
 
@@ -373,6 +373,19 @@
 <p>31-&gt; train数据集中共有31天采集数据</p>
 <p>36 -&gt; 四种类别*九种光谱</p>
 <h3 id="缺失值填充"><a href="#缺失值填充" class="headerlink" title="缺失值填充"></a>缺失值填充</h3><p>如果只是简单的将缺失值填充到缺失部分,那么众数可能比中位数更加符合逻辑?在有大面积噪声的情况下统一当时的情况然后对存在缺失值的列全部更换</p>
+<h5 id="测试-使用众数替换当列NaN值"><a href="#测试-使用众数替换当列NaN值" class="headerlink" title="测试: 使用众数替换当列NaN值"></a>测试: 使用众数替换当列NaN值</h5><p>使用classfication函数作为模版修改</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">classfication</span>(<span class="params">df</span>):</span></span><br><span class="line"><span class="comment">#     mean = [] # p平均数</span></span><br><span class="line"><span class="comment">#     mode = [] # 众数</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> cla <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(classes)):</span><br><span class="line">        df_cla = class_by_class(df)</span><br><span class="line">        df_cla_g = get_class(df_cla,classes[cla])</span><br><span class="line">        df_spec = class_by_spectrum(df_cla_g)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(spectrum)):</span><br><span class="line">            df_spec_g = get_spectrum(df_spec,spectrum[i])</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(hh)):</span><br><span class="line"><span class="comment">#                 print(type(df_spec_g[hh[j]]))</span></span><br><span class="line"><span class="comment">#                 mode.append(df_spec_g[hh[j]].mode())</span></span><br><span class="line"><span class="comment">#                 mean.append(df_spec_g[hh[j]].mean())</span></span><br><span class="line">                df_spec_g[hh[j]].fillna(df_spec_g[hh[j]].mode())</span><br><span class="line">    <span class="keyword">return</span> df_spec_g</span><br><span class="line"></span><br><span class="line">df = classfication(df2)</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">df.count()</span><br><span class="line"></span><br><span class="line">spectrum    <span class="number">3396391</span></span><br><span class="line"><span class="class"><span class="keyword">class</span>       3396391</span></span><br><span class="line"><span class="class"><span class="title">i</span>           3396391</span></span><br><span class="line"><span class="class"><span class="title">j</span>           3396391</span></span><br><span class="line"><span class="class"><span class="title">x</span>           3396391</span></span><br><span class="line"><span class="class"><span class="title">y</span>           3396391</span></span><br><span class="line"><span class="class">111         3396391</span></span><br><span class="line"><span class="class">131         3396391</span></span><br><span class="line"><span class="class"> - 141         1908473</span></span><br><span class="line"><span class="class">171         3396391</span></span><br><span class="line"><span class="class">174         3396391</span></span><br><span class="line"><span class="class">181         3396391</span></span><br><span class="line"><span class="class"> - 194         3361184</span></span><br><span class="line"><span class="class"> - 204         3377342</span></span><br><span class="line"><span class="class">214         3396391</span></span><br><span class="line"><span class="class">224         3396391</span></span><br><span class="line"><span class="class">231         3396391</span></span><br><span class="line"><span class="class"> - 234         3379846</span></span><br><span class="line"><span class="class"> - 244         3257304</span></span><br><span class="line"><span class="class">251         3396391</span></span><br><span class="line"><span class="class">254         3396391</span></span><br><span class="line"><span class="class"> - 271         3370616</span></span><br><span class="line"><span class="class">109         3396391</span></span><br><span class="line"><span class="class"> - 126         3396028</span></span><br><span class="line"><span class="class">176         3396391</span></span><br><span class="line"><span class="class"> - 189         3148883</span></span><br><span class="line"><span class="class"> - 196         1782330</span></span><br><span class="line"><span class="class">206         3389551</span></span><br><span class="line"><span class="class">216         3396391</span></span><br><span class="line"><span class="class">239         3396391</span></span><br><span class="line"><span class="class">246         3396391</span></span><br><span class="line"><span class="class">259         3396391</span></span><br><span class="line"><span class="class"> - 266          638613</span></span><br><span class="line"><span class="class"> - 269         3395438</span></span><br><span class="line"><span class="class"> - 276         3396391</span></span><br><span class="line"><span class="class"> - 279         2408510</span></span><br><span class="line"><span class="class"> - 296         3225837</span></span><br><span class="line"><span class="class"><span class="title">dtype</span>:</span> int64</span><br></pre></td></tr></table></figure>
+
+<p>在经过处理后可以看到 141列,196列,279列和266列仍然有明显数据缺失,其中266数据缺失过于大</p>
+<p>思考:</p>
+<pre><code>- 填充函数为何没有起到作用
+- 266列的数据的保存必要性
+- 其他小部分缺失值
+</code></pre>
 
       
     </div>
@@ -546,7 +559,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TO52-dataset-PD"><span class="nav-number">1.</span> <span class="nav-text">TO52-dataset-PD</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%86%E5%88%86%E7%B1%BB"><span class="nav-number">1.0.1.</span> <span class="nav-text">细分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%BA%E5%A4%B1%E5%80%BC%E5%A1%AB%E5%85%85"><span class="nav-number">1.0.2.</span> <span class="nav-text">缺失值填充</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TO52-dataset-PD"><span class="nav-number">1.</span> <span class="nav-text">TO52-dataset-PD</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%86%E5%88%86%E7%B1%BB"><span class="nav-number">1.0.1.</span> <span class="nav-text">细分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%BA%E5%A4%B1%E5%80%BC%E5%A1%AB%E5%85%85"><span class="nav-number">1.0.2.</span> <span class="nav-text">缺失值填充</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95-%E4%BD%BF%E7%94%A8%E4%BC%97%E6%95%B0%E6%9B%BF%E6%8D%A2%E5%BD%93%E5%88%97NaN%E5%80%BC"><span class="nav-number">1.0.2.0.1.</span> <span class="nav-text">测试: 使用众数替换当列NaN值</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
