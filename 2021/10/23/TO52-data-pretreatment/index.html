@@ -151,7 +151,7 @@
 
 
 
-  <title>标签: API | Indéfini-未定义的我</title>
+  <title>TO52-data_pretreatment | Indéfini-未定义的我</title>
   
 
 
@@ -170,7 +170,7 @@
     
   
 
-  <div class="container sidebar-position-right ">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     
@@ -256,60 +256,163 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>API<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://esept.github.io/2021/10/23/TO52-data-pretreatment/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/hsush.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Indéfini-未定义的我">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2020/06/30/java_API/" itemprop="url">
-              
-                <span itemprop="name">Java_API</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">TO52-data_pretreatment</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-06-30T13:16:51+02:00"
-              content="2020-06-30" >
-          06-30
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-10-23T11:34:43+02:00">2021-10-23</time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>对于原始数据的预处理</p>
+<ul>
+<li>数据合并</li>
+<li>在原始数据中对空值进行处理是否会比一次性处理所有数据更简便</li>
+<li>空值,不合理值处理</li>
+</ul>
+<span id="more"></span>
+
+<h3 id="读取csv文件"><a href="#读取csv文件" class="headerlink" title="读取csv文件"></a>读取csv文件</h3><p>由于所有csv文件过多,因此创建txt文件存储所有csv文件名称,在排序之后按A-&gt;B以及日期顺序读取</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;datas.txt&quot;</span>,<span class="string">&quot;r&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    data_names = f.read().splitlines()</span><br><span class="line">data_names.sort() </span><br><span class="line">dataframes = []</span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> data_names:</span><br><span class="line">    df = pd.read_csv(name,sep=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    dataframes.append(df)</span><br></pre></td></tr></table></figure>
+
+<p>创建原始主要数据,并加入spectrum与日期信息</p>
+<p>首先需要创建主要数据的格式</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/10/22/V3-Corriage/" rel="next" title="V3-Corriage">
+                <i class="fa fa-chevron-left"></i> V3-Corriage
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
 
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -330,8 +433,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -395,6 +507,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96csv%E6%96%87%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">读取csv文件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -540,6 +668,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.1"></script>
+
+
 
   
 
